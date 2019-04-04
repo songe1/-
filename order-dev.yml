@@ -8,6 +8,11 @@ spring:
     name: order
   jpa: 
     show-sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     service-url:
