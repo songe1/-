@@ -1,0 +1,16 @@
+spring.application.name=consul-consumer
+spring.cloud.consul.host=127.0.0.1
+spring.cloud.consul.port=8500
+spring.cloud.consul.discovery.instance-id=${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+spring.cloud.consul.discovery.health-check-path=/actuator/health
+spring.cloud.consul.discovery.health-check-interval=10s
+server.port=9092
+#rabbitmq配置
+spring.rabbitmq.host=localhost
+spring.rabbitmq.port=5672
+spring.rabbitmq.username=guest
+spring.rabbitmq.password=guest
+#解决引用用一个feignClient的报错
+spring.main.allow-bean-definition-overriding=true
+#开启断容器
+feign.hystrix.enabled=true
